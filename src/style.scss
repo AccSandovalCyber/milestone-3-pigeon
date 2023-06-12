@@ -1,0 +1,41 @@
+
+//https://web.dev/viewport-units/
+//https://usbrandcolors.com/twitter-colors/
+.formContainer {
+    background-color: #1DA1F2;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+//https://developer.mozilla.org/en-US/docs/Web/CSS/columns 
+ .signContainer{
+    background-color: #F5F8FA;
+    padding: 50px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+ }
+ input{
+    background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	width: 100%;
+ }
+ .h1{
+    font-weight: bold;
+    color: #14171A;
+    margin: 0;
+ }
+ .h2{
+    color: #14171A;
+ }
+ .btn{
+    align-items: center;
+    border-radius: 10px;
+	 background-color: black;
+	 color: white;
+	 font-size: 12px;
+	 font-weight: bold;
+	 padding: 12px 45px;
+ }
+} 
