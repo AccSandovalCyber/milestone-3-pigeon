@@ -9,6 +9,7 @@ function CreateUser() {
     const [password, setUserPassword] = useState('');
 
     const handleSubmit = () => {
+        console.log(handleSubmit)
 
     };
 
