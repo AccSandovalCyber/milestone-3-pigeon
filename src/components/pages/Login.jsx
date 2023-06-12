@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -39,6 +41,9 @@ function Login() {
                 <button className="btn" onClick={handleSubmit}>
                     Submit
                 </button>
+                <p>
+                If you do not have an account, -> <Link to="/createuser">Sign up here</Link>
+                </p>
                 </div>
             </div>
 
