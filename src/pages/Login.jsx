@@ -3,8 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-function CreateUser() {
-    const [email, setUserEmail] = useState('');
+const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setUserPassword] = useState('');
 
@@ -17,17 +16,7 @@ function CreateUser() {
         <div className='formContainer' >
             <div className="signContainer">
             <h1>Pigeon</h1>
-            <h2>Sign up today</h2>
-            <label htmlFor="email">Email: </label>
-                <br />
-                {/* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input */}
-                <input
-                    type="text"
-                    placeholder='Email'
-                    id="email"
-                    value={email}
-                    onChange={ev => setUserEmail(ev.target.value)}
-                />
+            <h2>Welcome Back!</h2>
                 <br />
                 <label htmlFor="username">Username: </label>
                 <br />
@@ -54,11 +43,11 @@ function CreateUser() {
                     Submit
                 </button>
                 <p>
-                If you have an account, welcome back -> <Link to="/login">Log in here</Link>
+                If you do not have an account, -> <Link to="/createuser">Sign up here</Link>
                 </p>
                 </div>
             </div>
 
     );
 }
-export default CreateUser;
+export default Login;
