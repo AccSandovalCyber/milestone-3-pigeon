@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from './componets/pages/Home';
-import CreateUser from './componets/pages/CreateUser';
-import Login from './componets/pages/Login';
+import Home from './pages/Home';
+import CreateUser from './pages/CreateUser';
+import Login from './pages/Login';
 import './style.scss';
 
 function App() {
