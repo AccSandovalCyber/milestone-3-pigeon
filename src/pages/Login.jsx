@@ -1,17 +1,29 @@
 import React from 'react'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom'; 
+import { auth } from '../firebase'; 
 
 
 const Login = () => {
+    const history = useHistory();
     const [username, setUsername] = useState('');
     const [password, setUserPassword] = useState('');
 
     const handleSubmit = () => {
-        console.log(handleSubmit)
-
+        auth.signInWithEmailAndPassword(username, password)
+          .then(() => {
+            // Handle successful login
+            console.log('User logged in successfully');
+            history.push('/home'); // Redirect to the Home component
+          })
+          .catch((error) => {
+            // Handle login error
+            console.log('Login error:', error);
+          });
     };
-
+    
+    
     return (
         <div className='formContainer' >
             <div className="signContainer">
