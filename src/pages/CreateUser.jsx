@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+// import { db } from '../firebase';
 // import NavBar from '../components/Navbar';
 
 
@@ -9,10 +10,28 @@ const CreateUser = () => {
     const [username, setUsername] = useState('');
     const [password, setUserPassword] = useState('');
 
-    const handleSubmit = () => {
-        console.log(handleSubmit)
-
-    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(handleSubmit);
+    
+        // db.collection('users')
+        //   .add({
+        //     email: email,
+        //     username: username,
+        //     password: password,
+        //   })
+        //   .then(() => {
+        //     alert('User has been created');
+        //   })
+        //   .catch((error) => {
+        //     alert(error.message);
+        //     // setLoader(false);
+        //   });
+    
+        // setUserEmail('');
+        // setUsername('');
+        // setUserPassword('');
+      };
 
     return (
         <div className='formContainer' >
