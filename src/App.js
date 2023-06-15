@@ -1,6 +1,6 @@
 import React from 'react';
-// import { BrowserRouter } from 'react-router-dom';
-import Home from './pages/Home';
+import { BrowserRouter } from 'react-router-dom';
+// import Home from './pages/Home';
 import CreateUser from './pages/CreateUser';
 // import Login from './pages/Login';
 import './style.scss';
@@ -8,16 +8,16 @@ import './style.scss';
 
 function App() {
   return (
-    // <BrowserRouter>
+    <BrowserRouter>
       <div className="App">
         <div className="header">
           {/* <Navbar /> */}
-          <Home />
+          {/* <Home /> */}
           <CreateUser />
           {/* <Login /> */}
         </div>
       </div>
-    // </BrowserRouter>
+     </BrowserRouter>
   );
 }
 
