@@ -1,23 +1,23 @@
-import React from 'react'
-import { BrowserRouter} from "react-router-dom";
+import React from 'react';
+// import { BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import CreateUser from './pages/CreateUser';
-import Login from './pages/Login';
+// import Login from './pages/Login';
 import './style.scss';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
       <div className="App">
         <div className="header">
-          <Navbar />
+          {/* <Navbar /> */}
           <Home />
           <CreateUser />
-          <Login />
+          {/* <Login /> */}
         </div>
-      </div> 
-    </BrowserRouter>
+      </div>
+    // </BrowserRouter>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../pigeon.png';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 
 function NavBar() {
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import NavBar from '../components/Navbar';
+import { Link } from 'react-router-dom';
+// import NavBar from '../components/Navbar';
 
 
 const CreateUser = () => {
@@ -55,7 +55,7 @@ const CreateUser = () => {
                     Submit
                 </button>
                 <p>
-                If you have an account, welcome back -> <Link to="/login">Log in here</Link>
+                If you have an account, welcome back <Link to="/login">Log in here</Link>
                 </p>
                 </div>
             </div>
