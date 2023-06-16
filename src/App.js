@@ -4,14 +4,14 @@ import { BrowserRouter } from 'react-router-dom';
 import CreateUser from './pages/CreateUser';
 // import Login from './pages/Login';
 import './style.scss';
-// import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <div className="header">
-          {/* <Navbar /> */}
+          <Navbar />
           {/* <Home /> */}
           <CreateUser />
           {/* <Login /> */}

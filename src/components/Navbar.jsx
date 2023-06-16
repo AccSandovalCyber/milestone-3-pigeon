@@ -9,7 +9,7 @@ function NavBar() {
         <nav class= "navbar navbar-expand-lg navbar-light bg-light">
             <div className="navbar-left">
                 <span class="navbar-toggler-icon"></span>
-                <img src={logo} title="Pigeon Logo" width="30" height="30" class="d-inline-block aling-top"/>
+                <img src={logo} alt="logo" title="Pigeon Logo" width="30" height="30" class="d-inline-block aling-top"/>
                 <Link className="navbar-brand" to="/">Home</Link>
             </div>
         </nav>
