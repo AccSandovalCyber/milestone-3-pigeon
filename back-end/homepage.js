@@ -3,32 +3,32 @@ const db = require('../../front-end/models')
 const index = require('../views/index') 
 
 
-//Homepage
+//CreateUser
 
 router.get('/', (req, res) => {
     db.Post.find()
       .then((post) => {
-        res.render('views/index', { index })
+        res.render('pages/CreateUser', { CreateUser })
       })
         .catch(err => {
             console.log('err', err)
             res.render('error404')
         })
   })
-//Profile
+//Home
 
-        router.get('/profile', (req, res) => {
-          res.render('/profile', { profile })
+        router.get('/Home', (req, res) => {
+          res.render('/Home', { Home })
                 })
                 .catch(err => {
                     console.log('err', err)
                     res.render('error404')
                 })
 
-//Settings
+//LandingPage
 
-router.get('/settings', (req, res) => {
-    res.render('/settings', { settings })
+router.get('/LandingPage', (req, res) => {
+    res.render('/LandingPage', { LandingPage })
           })
           .catch(err => {
               console.log('err', err)
@@ -37,8 +37,8 @@ router.get('/settings', (req, res) => {
 
 //Login
 
-router.get('/login', (req, res) => {
-    res.render('/login', { login })
+router.get('/Login', (req, res) => {
+    res.render('/Login', { Login })
           })
           .catch(err => {
               console.log('err', err)
