@@ -13,7 +13,8 @@ function App() {
       <div className="App">
         <div className="header">
           <Navbar />
-          <Home />
+          {/* <Home /> */}
+          <Login />
         </div>
       </div>
      </BrowserRouter>
