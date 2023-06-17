@@ -1,65 +1,43 @@
-import React from 'react'
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom'; 
-import { auth } from '../firebase'; 
+import {auth, provider} from '../firebase';
+import {useState} from 'react';
+import { signInWithPopup } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 
-const Login = () => {
-    const history = useHistory();
-    const [username, setUsername] = useState('');
-    const [password, setUserPassword] = useState('');
+function App() {
 
-    const handleSubmit = () => {
-        auth.signInWithEmailAndPassword(username, password)
-          .then(() => {
-            // Handle successful login
-            console.log('User logged in successfully');
-            history.push('/home'); // Redirect to the Home component
-          })
-          .catch((error) => {
-            // Handle login error
-            console.log('Login error:', error);
-          });
-    };
-    
-    
-    return (
-        <div className='formContainer' >
-            <div className="signContainer">
-            <h1>Pigeon</h1>
-            <h2>Welcome Back!</h2>
-                <br />
-                <label htmlFor="username">Username: </label>
-                <br />
-                <input
-                    type="text"
-                    placeholder='Username'
-                    id="username"
-                    value={username}
-                    onChange={ev => setUsername(ev.target.value)}
-                />
-                <br />
-                <label htmlFor="password">Password: </label>
-                <br />
-                <input
-                    type="password"
-                    placeholder='Password'
-                    id="password"
-                    value={password}
-                    onChange={ev => setUserPassword(ev.target.value)}
-                />
-                <br />
-                {/* will handle fetch from firebase/backend once set up correctly */}
-                <button className="btn" onClick={handleSubmit}>
-                    Submit
-                </button>
-                <p>
-                If you do not have an account, - <Link to="/createuser">Sign up here</Link>
-                </p>
-                </div>
-            </div>
+  const [ user, setUser] = useState(null);
+  const navigate = useNavigate();
 
-    );
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, provider).then((result)=>{
+      const user = result.user;
+      console.log(user);
+      setUser(user);
+      navigate('/home'); // Redirect to the home page;
+    })
+  //https://firebase.google.com/docs/auth/web/google-signin
+    .catch((err)=>{
+      console.log(err);
+    });
+  }
+
+  return (
+    <div className='formContainer' >
+      <div className="signContainer">
+      <h1>Pigeon</h1>
+      <h2>Welcome Back!</h2>
+          {user?(
+            <>
+            </>
+          ):(
+          <button className='btn' onClick={handleGoogleSignIn}> Sign In With Google </button>  
+          )} 
+      </div>
+    </div>
+  );
 }
-export default Login;
+
+export default App;
+
+
