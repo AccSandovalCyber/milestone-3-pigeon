@@ -13,12 +13,7 @@ function App() {
       <div className="App">
         <div className="header">
           <Navbar />
-          {/* <Home /> */}
-          <CreateUser />
-          {/* <Login /> */}
-          <Login />
           <Home />
-          <Chatbox />
         </div>
       </div>
      </BrowserRouter>
