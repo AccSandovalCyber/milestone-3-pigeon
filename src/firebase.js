@@ -1,7 +1,7 @@
-//Firebase SDK to initialize the Firebase app, access the Firestore database service, and manage user authentication with Google.
 import { initializeApp } from 'firebase/app';
 import { getFirestore  } from '@firebase/firestore';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAAIDgfLMGijRneFKC6l9q6pClqm8b7M7o",
