@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-// import Home from './pages/Home';
+import Login from './pages/Login'; 
+import Home from './pages/Home';
 import CreateUser from './pages/CreateUser';
-// import Login from './pages/Login';
+import Chatbox from './components/Chatbox';
 import './style.scss';
+import { BrowserRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
           {/* <Home /> */}
           <CreateUser />
           {/* <Login /> */}
+          <Login />
+          <Home />
+          <Chatbox />
         </div>
       </div>
      </BrowserRouter>
