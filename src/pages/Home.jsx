@@ -1,19 +1,15 @@
 import React from 'react';
 import Chatbox from '../components/Chatbox';
-import Login from '../pages/Login';
 
-const Home = () => {
-    const user = null;
+const Home = ({ user }) => {
   return (
     <div className='home'>
       <div className="container">
-      <section>
-        {user ? <Chatbox /> : <Login />}
-      </section>
+        {user ? <Chatbox user={user} /> : 'login'}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Home;
   

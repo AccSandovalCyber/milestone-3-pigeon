@@ -1,20 +1,18 @@
 import React from 'react';
 import Login from './pages/Login'; 
 import Home from './pages/Home';
-import CreateUser from './pages/CreateUser';
-import Chatbox from './components/Chatbox';
+// import CreateUser from './pages/CreateUser';
 import './style.scss';
 import { BrowserRouter } from 'react-router-dom';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <div className="header">
-          <Navbar />
-          {/* <Home /> */}
           <Login />
+          <Home />
         </div>
       </div>
      </BrowserRouter>
@@ -22,3 +20,5 @@ function App() {
 }
 
 export default App;
+
+
