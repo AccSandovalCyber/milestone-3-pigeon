@@ -55,3 +55,45 @@
    background-color: rgba(150, 118, 218, 0.477);
    border-color: black;
 }
+
+.home {
+   background-color: #a7bca7;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   .container{
+      border: 1px solid white;
+      border-radius: 10px;
+      width: 65%;
+      height: 80%;
+      display: flex;
+      overflow: hidden;
+
+      .sidebar{
+         flex: 1;
+         border-right: 1px solid #3e3c61;
+         background-color: #3e3c61;
+
+         .navbar{
+            display: flex;
+            align-items:center;
+            background-color: #2f2d52;
+            height: 50px;
+            padding: 10px;
+            justify-content: space-between;
+            color: #ddddf7;
+            
+            .logo{
+               font-weight:bold;
+            }
+
+         }
+         
+      }
+      .chat{
+         flex: 2;
+      }
+   }
+}
