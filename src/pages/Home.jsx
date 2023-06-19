@@ -7,7 +7,7 @@ const Home = ({ user }) => {
   return (
     <div className='home'>
       <div className="container">
-        {user ? <Chatbox user={user} /> : 'login'} 
+        {user ? <Chatbox user={user} /> : <button> Login </button>} 
       </div>
     </div>
   );
