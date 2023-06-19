@@ -2,42 +2,41 @@ import {auth, provider} from '../firebase';
 import {useState} from 'react';
 import { signInWithPopup } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import Home from './Home';
 
 
-function App() {
+function LogIn() {
 
-  const [ user, setUser] = useState(null);
-  const navigate = useNavigate();
+  const [user, setUser] = useState(null);
+    const navigate = useNavigate();
 
-  const handleGoogleSignIn = () => {
+
+  const handleGoogleSignIn=()=>{
     signInWithPopup(auth, provider).then((result)=>{
       const user = result.user;
       console.log(user);
       setUser(user);
-      navigate('/home'); // Redirect to the home page;
+      navigate('/home')
     })
-  //https://firebase.google.com/docs/auth/web/google-signin
     .catch((err)=>{
       console.log(err);
-    });
+    })
   }
 
   return (
-    <div className='formContainer' >
-      <div className="signContainer">
-      <h1>Pigeon</h1>
-      <h2>Welcome Back!</h2>
+    <div className="formContainer">
+      <div className='signContainer'>
           {user?(
             <>
+            <Home user={user} />
             </>
           ):(
-          <button className='btn' onClick={handleGoogleSignIn}> Sign In With Google </button>  
+            <button className='btn' onClick={handleGoogleSignIn}> Sign In With Google </button>
           )} 
       </div>
     </div>
   );
 }
 
-export default App;
-
+export default LogIn;
 
