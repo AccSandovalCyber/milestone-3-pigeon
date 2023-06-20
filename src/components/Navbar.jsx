@@ -29,9 +29,9 @@ const NavBar = () => {
           Sign Out
         </button>
       ) : (
-        
+
           <button className='sign-in' onClick={googleSignIn}> Sign In With Google </button>
-      
+
       )}
     </nav>
   );
