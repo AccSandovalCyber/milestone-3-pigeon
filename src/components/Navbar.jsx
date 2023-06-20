@@ -1,33 +1,34 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../pigeon.png';
-// import { useDispatch } from 'react-redux';
+import React from "react";
+import { auth } from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 
-function NavBar() {
+const NavBar = () => {
+  const [user] = useAuthState(auth);
 
-    return (
-        <nav class= "navbar navbar-expand-lg navbar-light bg-light">
-            <div className="navbar-left">
-                <span class="navbar-toggler-icon"></span>
-                <img src={logo} alt="logo" title="Pigeon Logo" width="30" height="30" class="d-inline-block aling-top"/>
-                <Link className="navbar-brand" to="/">Home</Link>
-            </div>
-        </nav>
-    );
-}
+  const googleSignIn = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithRedirect(auth, provider);
+  };
 
-export const navForm = ({text, style, _onClick }) => {
-    const _onClickHandler = (event) => {
-        event.preventDefault();
-        _onClick?.(event);
-    };
+  const signOut = () => {
+    auth.signOut();
+  };
 
-    return (
-        <button {...style}>
-            <Link href='#' onClick={_onClickHandler}>
-                {text}
-            </Link>
+  return (
+    <nav className="nav-bar">
+      <h1>React Chat</h1>
+      {user ? (
+        <button onClick={signOut} className="sign-out" type="button">
+          Sign Out
         </button>
-    );
+      ) : (
+        
+          <button className='sign-in' onClick={googleSignIn}> Sign In With Google </button>
+      
+      )}
+    </nav>
+  );
 };
+
 export default NavBar;
