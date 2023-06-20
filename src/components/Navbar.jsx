@@ -1,49 +1,34 @@
-import React from 'react';
-//import { Link } from 'react-router-dom';
-//import logo from '../pigeon.png';
-// import { useDispatch } from 'react-redux';
+import React from "react";
+import { auth } from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 
-const Navbar = () => {
-    return (
-      <div className='navbar'>
-        <span className="logo"> Pigeon</span>
-        <div className="user">
-          <img src="https://i1.sndcdn.com/avatars-000867944221-g1mgn0-t500x500.jpg" alt=""/>
-          <span>Pak</span>
-          <button>Logout</button>
-  
-        </div>
-      </div>
-    )
-  }
-  
-  export default Navbar;
+const NavBar = () => {
+  const [user] = useAuthState(auth);
 
-// function NavBar() {
+  const googleSignIn = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithRedirect(auth, provider);
+  };
 
-//     return (
-//         <nav class= "navbar navbar-expand-lg navbar-light bg-light">
-//             <div className="navbar-left">
-//                 <span class="navbar-toggler-icon"></span>
-//                 <img src={logo} alt="logo" title="Pigeon Logo" width="30" height="30" class="d-inline-block aling-top"/>
-//                 <Link className="navbar-brand" to="/">Home</Link>
-//             </div>
-//         </nav>
-//     );
-// }
+  const signOut = () => {
+    auth.signOut();
+  };
 
-// export const navForm = ({text, style, _onClick }) => {
-//     const _onClickHandler = (event) => {
-//         event.preventDefault();
-//         _onClick?.(event);
-//     };
+  return (
+    <nav className="nav-bar">
+      <h1>React Chat</h1>
+      {user ? (
+        <button onClick={signOut} className="sign-out" type="button">
+          Sign Out
+        </button>
+      ) : (
+        
+          <button className='sign-in' onClick={googleSignIn}> Sign In With Google </button>
+      
+      )}
+    </nav>
+  );
+};
 
-//     return (
-//         <button {...style}>
-//             <Link href='#' onClick={_onClickHandler}>
-//                 {text}
-//             </Link>
-//         </button>
-//     );
-// };
-// export default NavBar;
+export default NavBar;
