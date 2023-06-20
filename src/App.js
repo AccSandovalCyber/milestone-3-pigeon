@@ -1,5 +1,4 @@
 import React from 'react';
-import Login from './pages/Login'; 
 import Home from './pages/Home';
 // import CreateUser from './pages/CreateUser';
 import './style.scss';
@@ -11,10 +10,13 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <div className="header">
+<<<<<<< HEAD
           <Navbar />
           <Login />
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 5aa942c53a57ec37bbde0809847ba806fe4105d1
           <Home /> 
 >>>>>>> 2333d717478f44d4ab55c95acb2118c5a5368ecf
         </div>
