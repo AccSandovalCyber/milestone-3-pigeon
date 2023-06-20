@@ -15,8 +15,9 @@ const NavBar = () => {
     auth.signOut();
   };
 
+  // Our NavBar component allows a user to sign in with Google or sign out of the app 
   return (
-    <nav className="nav-bar">
+    <nav className="nav-bar"> 
       <h1>React Chat</h1>
       {user ? (
         <button onClick={signOut} className="sign-out" type="button">
