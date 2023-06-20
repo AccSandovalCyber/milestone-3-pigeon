@@ -20,3 +20,4 @@ const auth = getAuth(firebaseApp);
 const provider = new GoogleAuthProvider();
 
 export { db, auth, provider, GoogleAuthProvider };
+
