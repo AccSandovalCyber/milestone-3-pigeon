@@ -1,4 +1,14 @@
+import React from 'react';
 // import Firebase
+
+const Messages = () => {
+  return (
+    <div>Messages</div>
+  )
+}
+
+export default Messages;
+
 
 // const messaging = getMessaging(app);
 
