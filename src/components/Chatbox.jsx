@@ -16,7 +16,7 @@ const ChatBox = ({ user }) => {
     }
   
     return (
-      <div className='chat'>
+      <div className='chat'>Chatbox
         {content}
       </div>
     );
