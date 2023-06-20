@@ -1,5 +1,4 @@
 import React from 'react';
-import Login from './pages/Login'; 
 import Home from './pages/Home';
 // import CreateUser from './pages/CreateUser';
 import './style.scss';
@@ -11,7 +10,6 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <div className="header">
-          <Login />
           <Home /> 
         </div>
       </div>
