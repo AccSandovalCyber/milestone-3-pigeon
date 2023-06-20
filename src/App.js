@@ -13,6 +13,10 @@ function App() {
         <div className="header">
           <Navbar />
           <Login />
+<<<<<<< HEAD
+=======
+          <Home /> 
+>>>>>>> 2333d717478f44d4ab55c95acb2118c5a5368ecf
         </div>
       </div>
      </BrowserRouter>
