@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <div className="header">
           <Login />
-          <Home />
+          <Home /> 
         </div>
       </div>
      </BrowserRouter>
