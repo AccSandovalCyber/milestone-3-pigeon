@@ -1,18 +1,16 @@
 import React from 'react';
-import Chatbox from '../components/Chatbox';
+import Sidebar from '../components/Sidebar'
+import Chatbox from '../components/Chatbox'
 
-
-//chatbox is render using a ternary operator which is a conditonal statement. User prop is true/false
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
-const Home = ({ user }) => {
+const Home = () => {
   return (
     <div className='home'>
       <div className="container">
-        {user ? <Chatbox user={user} /> : <button> Login </button>} 
+        <Sidebar/>
+        <Chatbox/>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Home;
-  

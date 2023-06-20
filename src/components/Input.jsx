@@ -2,7 +2,7 @@ import React from 'react';
 
 const Input = () => {
   return (
-    <div>Chatbox</div>
+    <div>Input</div>
   )
 }
 
