@@ -1,6 +1,6 @@
 # Pigeon™ 
 
-Whispers , Mysteries and Vanishing Secrets all in one Pigeon.
+Whispers , Mysteries and Vanishing Secrets all in one Pigeon. 
 ## Prerequisites 
 
 ### Frontend 
@@ -22,3 +22,15 @@ We appreciate the following individuals for their contributions to Pigeon:
 - [Oscar L.](https://github.com/LopEm15) 
 - [Stephan P.](https://github.com/pak-s) 
 - [Ricardo S.](https://github.com/)
+
+## Citations
+
+- SitePoint: [Google Authentication with React, Express, and Firestore](https://www.sitepoint.com/google-auth-react-express/)
+
+- Firebase Firestore: [Official Firestore Documentation](https://firebase.google.com/docs/firestore?authuser=0&hl=en)
+
+- Firebase Hooks: [Official Firebase Hooks Documentation](https://firebaseopensource.com/projects/csfrequency/react-firebase-hooks)
+
+## Icon Attribution
+
+The Pigeon icons used in this project are created by Freepik and obtained from Flaticon. You can find them [here](https://www.flaticon.com/free-icons/pigeon). 
