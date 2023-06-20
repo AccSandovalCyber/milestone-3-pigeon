@@ -27,6 +27,8 @@ input {
 
 /* navbar */
 .nav-bar {
+  position: sticky;
+  top: 0;
   padding: 10px 30px;
   display: flex;
   align-items: center;
