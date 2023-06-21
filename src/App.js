@@ -20,7 +20,7 @@
 // export default App;
 import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import "./App.css";
+import "./style.scss"
 import Navbar from "./components/Navbar";
 import Chatbox from "../src/components/Chatbox";
 
