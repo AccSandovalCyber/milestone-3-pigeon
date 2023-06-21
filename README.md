@@ -29,8 +29,8 @@ We appreciate the following individuals for their contributions to Pigeon:
 
 - Firebase Firestore: [Official Firestore Documentation](https://firebase.google.com/docs/firestore?authuser=0&hl=en)
 
-- Firebase Hooks: [Official Firebase Hooks Documentation](https://firebaseopensource.com/projects/csfrequency/react-firebase-hooks)
+- Firebase Hooks: [Official Firebase Hooks Documentation](https://firebaseopensource.com/projects/csfrequency/react-firebase-hooks).
 
 ## Icon Attribution
 
-The Pigeon icons used in this project are created by Freepik and obtained from Flaticon. You can find them [here](https://www.flaticon.com/free-icons/pigeon). 
+The Pigeon icons used in this project are created by Freepik and obtained from Flaticon. You can find them [here](https://www.flaticon.com/free-icons/pigeon).
