@@ -38,3 +38,37 @@ const NavBar = () => {
 };
 
 export default NavBar;
+<<<<<<< HEAD
+=======
+
+// Below I have the code for the navbar that does not have the google sign in button 
+
+// import React from "react";
+// import { auth } from "../firebase";
+// import { useAuthState } from "react-firebase-hooks/auth";
+// import logo from "../Beady.png";
+
+// const NavBar = () => {
+//   const [user] = useAuthState(auth);
+
+//   const signOut = () => {
+//     auth.signOut();
+//   };
+
+//   return (
+//     <nav className="nav-bar">
+//       <h1>
+//         <img src={logo} title="Pigeon Logo" width="30" height="30" className="d-inline-block align-top" alt="logo" />
+//         Pigeon
+//       </h1>
+//       {user && (
+//         <button onClick={signOut} className="sign-out" type="button">
+//           Sign Out
+//         </button>
+//       )}
+//     </nav>
+//   );
+// };
+
+// export default NavBar;
+>>>>>>> c15c89c6e79ff3afa87000a60675873af0e05655

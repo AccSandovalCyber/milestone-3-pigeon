@@ -22,12 +22,12 @@ import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import "./style.scss"
 import Navbar from "./components/Navbar";
-import Chatbox from "../src/components/Chatbox";
+import Chatbox from "./components/Chatbox";
+
 
 
 function App() {
   const [user] = useAuthState(auth);
-
   return (
     <div className="App">
       <Navbar />
