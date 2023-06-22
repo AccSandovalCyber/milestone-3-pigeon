@@ -24,7 +24,7 @@ function Login() {
     <div className="formContainer">
       <div className="signContainer">
         <div className="container1">
-          <img src="Beady.png" alt="pigeon" style={{width:150}}></img>
+          <img src="Beady.png" alt="pigeon" style={{width:300}}></img>
             <button className="button1" onClick={handleGoogleSignIn}>Sign In With Google</button>  
         </div>
       </div>
