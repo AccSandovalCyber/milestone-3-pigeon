@@ -15,6 +15,7 @@ const Home = () => {
      </div>
     <div className='home'>
       <div className="container">
+
         {user ? (
           <>
             <Navbar />
