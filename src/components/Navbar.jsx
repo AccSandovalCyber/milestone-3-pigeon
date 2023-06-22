@@ -1,17 +1,11 @@
 import React from "react";
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+// import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 import logo from "../Beady.png"
 
 const NavBar = () => {
   const [user] = useAuthState(auth);
-
-  const googleSignIn = () => {
-    const provider = new GoogleAuthProvider();
-    signInWithRedirect(auth, provider);
-  };
-
   const signOut = () => {
     auth.signOut();
   };
@@ -28,10 +22,7 @@ const NavBar = () => {
         <button onClick={signOut} className="sign-out" type="button">
           Sign Out
         </button>
-      ) : (
-
-          <button className='sign-in' onClick={googleSignIn}> Sign In With Google </button>
-
+      ) :  ( null
       )}
     </nav>
   );

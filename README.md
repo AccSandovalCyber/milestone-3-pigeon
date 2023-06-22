@@ -1,6 +1,8 @@
 # Pigeon™ 
 
 Whispers , Mysteries and Vanishing Secrets all in one Pigeon. 
+
+URL: https://milestone-p3-pigeon.web.app/ 
 ## Prerequisites 
 
 ### Frontend 
@@ -25,9 +27,9 @@ We appreciate the following individuals for their contributions to Pigeon:
 
 ## Citations
 
-- SitePoint: [Google Authentication with React, Express, and Firestore](https://www.sitepoint.com/google-auth-react-express/)
+- SitePoint: [Google Authentication with React, Express, and Firestore](https://www.sitepoint.com/google-auth-react-express/).
 
-- Firebase Firestore: [Official Firestore Documentation](https://firebase.google.com/docs/firestore?authuser=0&hl=en)
+- Firebase Firestore: [Official Firestore Documentation](https://firebase.google.com/docs/firestore?authuser=0&hl=en).
 
 - Firebase Hooks: [Official Firebase Hooks Documentation](https://firebaseopensource.com/projects/csfrequency/react-firebase-hooks).
 
