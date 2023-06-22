@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react"; // Hooks are used to manage state in functional components, 
 import {
   query,
   collection,
@@ -21,18 +21,18 @@ const ChatBox = () => {
       limit(50)
     );
 
-    const unsubscribe = onSnapshot(q, (QuerySnapshot) => {     // In the return function, we are unsubscribing from the onSnapshot listener, when the component unmounts to prevent memory leaks. 
+    const unsubscribe = onSnapshot(q, (QuerySnapshot) => {     // In this unsubscribe function we are unsubscribing from the onSnapshot listener, when the component unmounts to prevent memory leaks.
 
       const fetchedMessages = [];       
       QuerySnapshot.forEach((doc) => {
-        fetchedMessages.push({ ...doc.data(), id: doc.id });
+        fetchedMessages.push({ ...doc.data(), id: doc.id }); // Here we are pushing fetchedMessages object into the fetchedMessages array. 
       });
       const sortedMessages = fetchedMessages.sort(
-        (a, b) => a.createdAt - b.createdAt
+        (a, b) => a.createdAt - b.createdAt // Sorting our messages by the createdAt timestamp in ascending order.
       );
       setMessages(sortedMessages);
     });
-    return () => unsubscribe;
+    return () => unsubscribe; //  Over time memory leaks can cause an application to slow down or crash due to a lack of available memory.
   }, []);
 
   return (    // On the return function, we are mapping through the messages array and rendering the Message component for each message. 
