@@ -167,14 +167,14 @@ input {
 .button1 {
 	
 	margin: 30px;
-position: relative;
+	position: relative;
 	width:100%;
-height: auto;
+	height: auto;
 	top: 50%;
-		left: 33%;
+	left: 33%;
 	align-items:center;
-transform: translate(-70%, -70%, );
- display: block;
+	transform: translate(-70%, -70%, );
+ 	display: block;
 	border-radius: 1em;
 	background-color: #7289DA;
 	font-weight: bold;
@@ -186,5 +186,4 @@ transform: translate(-70%, -70%, );
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-
 }

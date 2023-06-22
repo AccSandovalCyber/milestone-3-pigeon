@@ -10,7 +10,7 @@ function Login() {
   const [ setUser] = useState(null);
   const history = createBrowserHistory();
   const handleGoogleSignIn = () => {
-    signInWithPopup(auth, provider)
+      signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
         console.log(user);
@@ -25,24 +25,12 @@ function Login() {
 
   return (
     <div className="formContainer">
-      
       <div className="signContainer">
-
-      <div className="container1">
-      <img src="Beady.png" alt="pigeon" style={{width:100}}></img>
-
-
-      <button className="button1" onClick={handleGoogleSignIn}>
-          Sign In With Google
-           
-          </button>  
+        <div className="container1">
+          <img src="Beady.png" alt="pigeon" style={{width:100}}></img>
+            <button className="button1" onClick={handleGoogleSignIn}>Sign In With Google</button>  
         </div>
-       
-       
-         </div>
-  
-    
-     
+      </div>
     </div>
   );
 }

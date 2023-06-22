@@ -6,12 +6,6 @@ import logo from "../Beady.png"
 
 const NavBar = () => {
   const [user] = useAuthState(auth);
-
-  // const googleSignIn = () => {
-  //   const provider = new GoogleAuthProvider();
-  //   signInWithRedirect(auth, provider);
-  // };
-
   const signOut = () => {
     auth.signOut();
   };
@@ -29,9 +23,6 @@ const NavBar = () => {
           Sign Out
         </button>
       ) :  ( null
-
-      //     <button className='sign-in' onClick={googleSignIn}> Sign In With Google </button>
-
       )}
     </nav>
   );
