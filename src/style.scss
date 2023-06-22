@@ -59,7 +59,12 @@ input {
 	font-weight: 600;
 	display: flex-box;
 	align-items: center;
+	background-img: "Beady.png";
 }
+.formContainer img {
+	width: 100%;
+	height: auto;
+  }
 
 .signContainer { 
 	padding: 5px 10px;
@@ -159,12 +164,27 @@ input {
 	outline: none;
 	border-bottom: 1px solid #7cc5d9;
 }
-.button {
+.button1 {
 	
-	margin: 0;
+	margin: 30px;
+position: relative;
+	width:100%;
+height: auto;
+	top: 50%;
+		left: 33%;
+	align-items:center;
+transform: translate(-70%, -70%, );
+ display: block;
+	border-radius: 1em;
+	background-color: #7289DA;
+	font-weight: bold;
+	color: rgb(4, 21, 21);
+ }
+ .container1 {
+ 	margin: 0;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-//define flexbox parameters
+
 }

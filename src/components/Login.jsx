@@ -2,19 +2,13 @@ import React, { useState } from "react";
 import { auth, provider } from "../firebase";
 import { signInWithPopup } from "firebase/auth";
 import { createBrowserHistory } from 'history';
-import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
+
 // import { useNavigate } from "react-router-dom";
-import Home from "../pages/Home";
+// import Home from "../pages/Home";
 
 function Login() {
-  const [user, setUser] = useState(null);
+  const [ setUser] = useState(null);
   const history = createBrowserHistory();
-  // const navigate = useNavigate();
-
-  // const googleSignIn = () => {
-  //   const provider = new GoogleAuthProvider();
-  //  signInWithRedirect(auth, provider);
-  //   };
   const handleGoogleSignIn = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
@@ -31,13 +25,24 @@ function Login() {
 
   return (
     <div className="formContainer">
+      
       <div className="signContainer">
-        
-          <button className="button" onClick={handleGoogleSignIn}>
-            Sign In With Google
-          </button>
+
+      <div className="container1">
+      <img src="Beady.png" alt="pigeon" style={{width:100}}></img>
+
+
+      <button className="button1" onClick={handleGoogleSignIn}>
+          Sign In With Google
+           
+          </button>  
+        </div>
+       
+       
+         </div>
   
-      </div>
+    
+     
     </div>
   );
 }
