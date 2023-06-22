@@ -18,7 +18,7 @@ input {
 .App {
 	width: 100%;
 	min-height: 100vh;
-	background-color: #242443,;
+	background-color: #242443;
 	color: #4c768d;
 }
 //Navbar
@@ -57,6 +57,8 @@ input {
 	border: 1px solid #1c2c4c;
 	background-color: #1c2c4c;
 	font-weight: 600;
+	display: flex-box;
+	align-items: center;
 }
 
 .signContainer { 
@@ -66,6 +68,7 @@ input {
 	border: 1px solid #1c2c4c;
 	background-color: #1c2c4c;
 	font-weight: 600;
+	align-items: center;
 }
 
 //Welcome Page 
@@ -155,4 +158,13 @@ input {
 .send-message > :is(input, button):focus {
 	outline: none;
 	border-bottom: 1px solid #7cc5d9;
+}
+.button {
+	
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+//define flexbox parameters
 }
