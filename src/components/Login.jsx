@@ -29,7 +29,7 @@ function Login() {
       <div className="signContainer">
 
       <div className="container1">
-      <img src="Beady.png" alt="pigeon" style={{width:100}}></img>
+      <img src="Beady.png" alt="pigeon" style={{width:150}}></img>
 
 
       <button className="button1" onClick={handleGoogleSignIn}>
